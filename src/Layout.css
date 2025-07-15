@@ -1,0 +1,107 @@
+/* layout.css */
+
+/* Global Reset and Font */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout container */
+.app-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .app-container {
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+/* Semantic component styles */
+header {
+  grid-area: header;
+  background-color: #fdf4e3;
+  padding: 1rem;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #fff0c1;
+  padding: 1rem;
+}
+
+main {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #fdf4e3;
+  padding: 1rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: #e8f5e9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+  background-color: #fdf4e3;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta h1 {
+  font-size: 2rem;
+  color: #495e57;
+}
+
+.cta button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cta button:hover {
+  background-color: #e3bd00;
+}
