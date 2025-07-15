@@ -27,22 +27,22 @@ function Main() {
 
   return (
     <main>
-      <section className="grid">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route
-            path="/booking"
-            element={
-              <BookingPage
-                availableTimes={availableTimes}
-                dispatch={dispatch}
-                submitForm={submitForm} //
-              />
-            }
-          />
-          <Route path="/confirmed" element={<ConfirmedBooking />} />
-        </Routes>
-      </section>
+      {/* <section className="grid"> */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/booking"
+          element={
+            <BookingPage
+              availableTimes={availableTimes}
+              dispatch={dispatch}
+              submitForm={submitForm} //
+            />
+          }
+        />
+        <Route path="/confirmed" element={<ConfirmedBooking />} />
+      </Routes>
+      {/* </section> */}
     </main>
   );
 }

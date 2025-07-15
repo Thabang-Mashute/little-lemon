@@ -3,36 +3,39 @@ import { Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <nav aria-label="Main navigation">
+    <nav className="nav" aria-label="Main navigation">
       <ul>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/booking">Book a Table</Link>
-          </li>
-        </ul>
-        {/* <li>
-          <Link to="/">Home</Link>
+        <li>
+          <Link to="/" className="nav-item ">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/menu">Menu</Link>
+          <Link to="/booking" className="nav-item ">
+            Book a Table
+          </Link>
         </li>
         <li>
-          <Link to="/booking">Book a Table</Link>
+          <Link to="/menu" className="nav-item ">
+            Menu
+          </Link>
+        </li>
+        <li>
+          <Link to="/reservation" className="nav-item ">
+            Reservation
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" className="nav-item ">
+            About Us
+          </Link>
         </li>
 
         <li>
-          <Link to="/reservation">Reservation</Link>
+          <Link to="/contact " className="nav-item ">
+            Contact
+          </Link>
         </li>
-        <li>
-          <Link to="/about">About Us</Link>
-        </li>
-
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li> */}
       </ul>
     </nav>
   );

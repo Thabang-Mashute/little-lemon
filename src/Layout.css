@@ -11,7 +11,7 @@ body {
   display: grid;
   grid-template-areas:
     "header"
-    "nav"
+    /* "nav" */
     "main"
     "footer";
   grid-template-columns: 1fr;
@@ -25,14 +25,14 @@ body {
   .app-container {
     grid-template-areas:
       "header header"
-      "nav main"
+      "main main"
       "footer footer";
     grid-template-columns: 1fr 3fr;
   }
 }
 
 /* Semantic component styles */
-header {
+/* header {
   grid-area: header;
   background-color: #fdf4e3;
   padding: 1rem;
@@ -42,6 +42,44 @@ nav {
   grid-area: nav;
   background-color: #fff0c1;
   padding: 1rem;
+} */
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  width: 100%;
+  height: 4em;
+  background-color: #edefee;
+}
+nav {
+  display: flex;
+  /* flex-direction: column; */
+  background-color: #fff;
+  gap: 1em;
+  position: relative;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+nav-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
 main {
@@ -61,6 +99,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
@@ -82,6 +122,23 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.content-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cta2 {
+  width: 100%;
+  padding: 2rem;
+  background-color: #495e57;
+  text-align: center;
+}
+.cta2 h1 {
+  font-size: 2rem;
+  color: #f4ce14;
+}
 .cta {
   background-color: #fdf4e3;
   padding: 2rem;
@@ -91,6 +148,14 @@ footer {
 .cta h1 {
   font-size: 2rem;
   color: #495e57;
+}
+.cta2 h2 {
+  font-size: 2rem;
+  color: #edefee;
+}
+.cta2 P {
+  font-size: 1rem;
+  color: #edefee;
 }
 
 .cta button {
@@ -104,4 +169,117 @@ footer {
 
 .cta button:hover {
   background-color: #e3bd00;
+}
+.cta2 button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cta2 button:hover {
+  background-color: #e3bd00;
+}
+.img-wrapper {
+  right: 2em;
+  max-width: 250px;
+  max-height: 275px;
+  align-self: flex-end;
+  margin-bottom: -1em;
+  flex-basis: 1;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.menu {
+  padding-block: 2em;
+}
+
+.menu-desc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.menu-img,
+.reviewer-img {
+  width: 100%;
+}
+
+.menu-img {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.cards,
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.card,
+.testimonial {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1em;
+}
+
+.card {
+  background-color: #edefee;
+  border-radius: 16px;
+  position: relative;
+}
+
+.name-price,
+.name-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirmed-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding-block: 2em;
+}
+
+.name-price,
+.item-desc,
+.delivery,
+.name-rating,
+.reviewer-name,
+.review-text {
+  padding-inline: 1em;
+}
+button {
+  background-color: #f4ce14;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e3bd00;
+}
+.nav-item {
+  color: #040404;
+  font-weight: 600;
+  text-decoration: inherit;
+  font-family: "Markazi", sans-serif;
 }
